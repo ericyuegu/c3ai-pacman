@@ -31,6 +31,7 @@ class TestRuntime(unittest.TestCase):
 
     def test_average_runtime(self):
         times = [self.get_runtime() for i in range(10)]
+        # print("runtime: {}".format(sum(times)/len(times)))
         self.assertLess(sum(times)/len(times), 0.01)
 
     def get_runtime(self):
